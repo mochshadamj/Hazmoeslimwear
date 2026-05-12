@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazmoeslimwear — Mukena Premium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --p50:#fff0f5;
+  --p100:#ffd6e7;
+  --p200:#ffadd0;
+  --p300:#ff7db8;
+  --p400:#f75f98;
+  --p500:#e8307a;
+  --p600:#c2195f;
+  --p700:#9a1049;
+  --nude:#fdf3f0;
+  --blush:#f9e4ed;
+  --mauve:#b07085;
+  --gold:#c8a87c;
+  --ink:#1c0d12;
+  --mid:#5a3045;
+  --muted:#9a7585;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+}
+
+body{
+  font-family:var(--sans);
+  background:var(--nude);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* ── CURSOR ── */
+body{cursor:crosshair}
+a,button{cursor:pointer}
+
+/* ── NOISE TEXTURE ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:0.4;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.4rem 4rem;
+  mix-blend-mode:normal;
+}
+nav.dark-nav .logo{color:#fff}
+nav.dark-nav .nav-right a{color:rgba(255,255,255,0.7)}
+nav.dark-nav .nav-right a:hover{color:#fff}
+nav.solid{background:rgba(253,243,240,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(176,112,133,0.12)}
+nav.solid .logo{color:var(--ink)}
+nav.solid .nav-right a{color:var(--mid)}
+
+.logo{
+  font-family:var(--serif);
+  font-size:1.15rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;
+  transition:color 0.3s;
+}
+.logo sup{font-size:0.5em;vertical-align:super;color:var(--gold);letter-spacing:0.06em}
+.nav-right{display:flex;align-items:center;gap:2.5rem}
+.nav-right a{
+  font-size:0.72rem;font-weight:500;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--mid);text-decoration:none;
+  transition:color 0.2s;
+}
+.nav-right a:hover{color:var(--p500)}
+.nav-pill{
+  background:var(--p500);color:#fff !important;
+  padding:0.5rem 1.4rem;border-radius:2px;
+  font-size:0.68rem !important;letter-spacing:0.16em !important;
+  transition:background 0.2s !important;
+}
+.nav-pill:hover{background:var(--p700) !important}
+
+/* ── HERO — FULL EDITORIAL ── */
+#hero{
+  height:100vh;min-height:640px;
+  display:grid;grid-template-columns:1fr 1fr;
+  position:relative;overflow:hidden;
+}
+.hero-left{
+  background:var(--p600);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:5rem 4rem 4.5rem;
+  position:relative;overflow:hidden;
+}
+.hero-left::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,var(--p500) 0%,var(--p700) 60%,#5a0a2c 100%);
+}
+.hero-left::after{
+  content:'HAZMOESLIMWEAR';
+  position:absolute;top:50%;left:-2rem;
+  transform:translateY(-50%) rotate(-90deg);
+  transform-origin:center;
+  font-family:var(--serif);
+  font-size:0.62rem;letter-spacing:0.4em;
+  color:rgba(255,255,255,0.12);
+  white-space:nowrap;
+  pointer-events:none;
+}
+.hero-tag{
+  position:relative;
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(255,255,255,0.55);margin-bottom:1.6rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.hero-tag::before{content:'';width:28px;height:1px;background:var(--gold)}
+.hero-h1{
+  position:relative;
+  font-family:var(--serif);
+  font-size:clamp(3rem,5.5vw,5.5rem);
+  font-weight:900;line-height:0.95;
+  color:#fff;
+  margin-bottom:2rem;
+}
+.hero-h1 .italic{font-style:italic;color:var(--p200)}
+.hero-h1 .gold{color:var(--gold)}
+.hero-sub{
+  position:relative;
+  font-size:0.88rem;line-height:1.9;
+  color:rgba(255,255,255,0.65);
+  max-width:380px;margin-bottom:2.5rem;
+}
+.hero-actions{position:relative;display:flex;gap:1rem;flex-wrap:wrap}
+.btn-white{
+  background:#fff;color:var(--p600);
+  padding:0.9rem 2rem;
+  font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;
+  transition:all 0.25s;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+.btn-white:hover{background:var(--p100);transform:translateY(-2px)}
+.btn-ghost-white{
+  border:1px solid rgba(255,255,255,0.35);
+  color:rgba(255,255,255,0.8);
+  padding:0.9rem 2rem;
+  font-size:0.75rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;
+  transition:all 0.25s;
+}
+.btn-ghost-white:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.6)}
+
+.hero-stats{
+  position:absolute;top:2.2rem;right:2.5rem;
+  display:flex;flex-direction:column;gap:1.5rem;
+  align-items:flex-end;
+}
+.hero-stat-item{text-align:right;position:relative}
+.hero-stat-num{
+  font-family:var(--serif);font-size:1.8rem;font-weight:700;
+  color:rgba(255,255,255,0.25);line-height:1;display:block;
+}
+.hero-stat-label{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+
+.hero-right{
+  position:relative;background:var(--blush);overflow:hidden;
+}
+.hero-img-fill{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,var(--p100) 0%,var(--blush) 40%,var(--p200) 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-img-fill img{width:100%;height:100%;object-fit:cover;display:block}
+.img-placeholder-hero{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0.8rem;color:var(--mauve);text-align:center;padding:2rem;
+}
+.img-placeholder-hero .ph-icon{font-size:2.5rem;opacity:0.4}
+.img-placeholder-hero p{font-size:0.8rem;opacity:0.5;font-family:var(--serif);font-style:italic}
+.hero-overlay-text{
+  position:absolute;bottom:2.5rem;left:2rem;
+  font-family:var(--serif);
+  font-size:clamp(4rem,8vw,7rem);
+  font-weight:900;font-style:italic;
+  color:rgba(255,255,255,0.18);
+  line-height:1;
+  pointer-events:none;
+  white-space:nowrap;
+}
+.hero-badge-float{
+  position:absolute;top:2rem;right:2rem;
+  background:#fff;
+  padding:1rem 1.2rem;text-align:center;
+  box-shadow:0 8px 32px rgba(176,112,133,0.2);
+  border-left:3px solid var(--p400);
+}
+.hbf-num{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--p600);line-height:1}
+.hbf-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+
+/* ── TICKER ── */
+.ticker{
+  background:var(--ink);
+  padding:0.7rem 0;overflow:hidden;
+  position:relative;
+}
+.ticker-track{
+  display:flex;gap:0;
+  white-space:nowrap;
+  animation:ticker 25s linear infinite;
+}
+.ticker-item{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+  padding:0 2.5rem;
+  display:flex;align-items:center;gap:2.5rem;
+}
+.ticker-item span{color:var(--gold)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── OPENING — DIAGONAL SPLIT ── */
+#opening{
+  min-height:80vh;
+  display:grid;grid-template-columns:45fr 55fr;
+  position:relative;overflow:hidden;
+}
+.opening-left{
+  background:var(--ink);
+  padding:6rem 4rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+  clip-path:polygon(0 0,90% 0,100% 100%,0 100%);
+}
+.opening-left::before{
+  content:'';position:absolute;
+  top:3rem;left:3rem;right:6rem;bottom:3rem;
+  border:1px solid rgba(200,168,124,0.15);
+  pointer-events:none;
+}
+.opening-eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.2rem;
+}
+.opening-title{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,3.5vw,3.5rem);
+  font-weight:700;color:#fff;line-height:1.15;
+  margin-bottom:1.5rem;
+}
+.opening-title em{font-style:italic;color:var(--p200)}
+.opening-body{
+  font-size:0.9rem;line-height:1.9;
+  color:rgba(255,255,255,0.55);
+  max-width:380px;
+}
+
+.opening-right{
+  background:var(--nude);
+  padding:5rem 4rem 5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.problem-list{display:flex;flex-direction:column;gap:0}
+.prob-item{
+  display:flex;align-items:flex-start;gap:1.5rem;
+  padding:1.6rem 0;
+  border-bottom:1px solid rgba(176,112,133,0.12);
+  transition:all 0.3s;
+}
+.prob-item:first-child{border-top:1px solid rgba(176,112,133,0.12)}
+.prob-item:hover .prob-num{color:var(--p500)}
+.prob-item:hover{padding-left:0.5rem}
+.prob-num{
+  font-family:var(--serif);font-size:2rem;font-weight:400;
+  color:rgba(176,112,133,0.25);line-height:1;flex-shrink:0;
+  transition:color 0.3s;
+  min-width:2.5rem;
+}
+.prob-content h3{
+  font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  color:var(--ink);margin-bottom:0.3rem;
+}
+.prob-content p{font-size:0.84rem;color:var(--muted);line-height:1.7}
+
+/* ── BENEFITS — FULL WIDTH EDITORIAL ── */
+#benefits{padding:0;position:relative}
+.benefit-banner{
+  background:var(--blush);
+  padding:5rem 4rem 3rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.benefit-banner::after{
+  content:'KEUNGGULAN';
+  position:absolute;bottom:-1.5rem;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);font-size:clamp(4rem,10vw,9rem);
+  font-weight:900;letter-spacing:0.06em;
+  color:rgba(176,112,133,0.08);
+  white-space:nowrap;pointer-events:none;
+}
+.benefit-banner .eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--p500);margin-bottom:0.8rem;
+}
+.benefit-banner h2{
+  font-family:var(--serif);
+  font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:700;color:var(--ink);line-height:1.15;
+}
+.benefit-banner h2 em{font-style:italic;color:var(--p500)}
+
+.benefit-strips{display:flex;flex-direction:column}
+.bstrip{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:280px;
+}
+.bstrip:nth-child(even){direction:rtl}
+.bstrip:nth-child(even)>*{direction:ltr}
+.bstrip-img{
+  background:var(--p100);
+  position:relative;overflow:hidden;
+}
+.bstrip-img img{width:100%;height:100%;object-fit:cover;display:block}
+.bstrip-img-ph{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0.6rem;color:var(--mauve);
+}
+.bstrip-img-ph .ph-icon{font-size:2rem;opacity:0.35}
+.bstrip-img-ph span{font-size:0.72rem;font-style:italic;font-family:var(--serif);opacity:0.45}
+.bstrip-content{
+  background:#fff;
+  padding:3.5rem 4rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+  border-bottom:1px solid rgba(176,112,133,0.1);
+}
+.bstrip-num{
+  font-family:var(--serif);font-size:5rem;font-weight:900;
+  color:rgba(176,112,133,0.07);
+  position:absolute;top:1rem;right:2rem;
+  line-height:1;pointer-events:none;
+}
+.bstrip-content h3{
+  font-family:var(--serif);font-size:1.6rem;font-weight:700;
+  color:var(--ink);margin-bottom:0.8rem;line-height:1.2;
+}
+.bstrip-content h3 em{font-style:italic;color:var(--p500)}
+.bstrip-content p{font-size:0.88rem;color:var(--muted);line-height:1.85;max-width:400px}
+.bstrip-tag{
+  display:inline-block;margin-bottom:0.8rem;
+  font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--p500);font-weight:500;
+}
+
+/* ── WHY — HORIZONTAL SCROLL FEEL ── */
+#why{
+  padding:6rem 4rem;
+  background:var(--ink);
+  overflow:hidden;position:relative;
+}
+#why::before{
+  content:'WHY US';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--serif);font-size:clamp(6rem,14vw,14rem);
+  font-weight:900;letter-spacing:0.05em;
+  color:rgba(255,255,255,0.025);
+  pointer-events:none;white-space:nowrap;
+}
+.why-header{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-bottom:3.5rem;flex-wrap:wrap;gap:1rem;
+}
+.why-header .eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.5rem;
+}
+.why-header h2{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:700;color:#fff;line-height:1.2;
+}
+.why-header h2 em{font-style:italic;color:var(--p300)}
+.why-header p{font-size:0.85rem;color:rgba(255,255,255,0.4);max-width:320px;line-height:1.7}
+
+.why-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(255,255,255,0.06);
+}
+.why-item{
+  background:var(--ink);
+  padding:2.5rem 2rem;
+  position:relative;overflow:hidden;
+  transition:background 0.4s;
+}
+.why-item:hover{background:#2d0f1c}
+.why-item::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--p400),var(--gold));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s;
+}
+.why-item:hover::after{transform:scaleX(1)}
+.why-item-letter{
+  font-family:var(--serif);font-size:3.5rem;font-weight:900;
+  color:rgba(255,255,255,0.06);
+  position:absolute;top:1rem;right:1.5rem;line-height:1;
+}
+.why-item h3{
+  font-family:var(--serif);font-size:1.2rem;font-weight:700;
+  color:#fff;margin-bottom:0.6rem;position:relative;
+}
+.why-item p{font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.75;position:relative}
+.why-icon{
+  width:36px;height:36px;
+  border:1px solid rgba(200,168,124,0.3);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;margin-bottom:1.2rem;
+}
+
+/* ── TESTIMONIALS — MAGAZINE QUOTES ── */
+#testimonials{
+  padding:7rem 4rem;
+  background:var(--nude);
+  position:relative;overflow:hidden;
+}
+#testimonials::before{
+  content:'"';
+  font-family:var(--serif);font-size:clamp(12rem,22vw,22rem);
+  font-weight:900;color:rgba(176,112,133,0.06);
+  position:absolute;top:-3rem;left:2rem;line-height:1;
+  pointer-events:none;
+}
+.testi-header-editorial{
+  display:grid;grid-template-columns:1fr 2fr;
+  gap:4rem;align-items:end;margin-bottom:5rem;
+}
+.testi-header-editorial .label-col{
+  position:relative;padding-top:4rem;
+}
+.testi-header-editorial .label-col::before{
+  content:'';position:absolute;top:0;left:0;
+  width:48px;height:2px;background:var(--p400);
+}
+.testi-header-editorial .eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--p500);margin-bottom:0.8rem;
+}
+.testi-header-editorial h2{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.5vw,3.2rem);
+  font-weight:700;color:var(--ink);line-height:1.15;
+}
+.testi-header-editorial h2 em{font-style:italic;color:var(--p500)}
+.testi-header-editorial .desc-col p{
+  font-size:0.95rem;color:var(--muted);line-height:1.85;
+  border-left:2px solid var(--p200);
+  padding-left:1.5rem;
+}
+
+.testi-masonry{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:auto;
+  gap:1.5rem;
+}
+.testi-quote{
+  padding:2.5rem;
+  border:1px solid rgba(176,112,133,0.14);
+  background:#fff;
+  position:relative;
+  transition:all 0.35s;
+}
+.testi-quote:hover{
+  border-color:rgba(232,48,122,0.25);
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(176,112,133,0.12);
+}
+.tq-1{grid-column:span 2}
+.tq-4{grid-column:span 2;background:var(--p600);}
+.tq-4 .tq-text{color:rgba(255,255,255,0.85)}
+.tq-4 .tq-name{color:#fff}
+.tq-4 .tq-city{color:rgba(255,255,255,0.5)}
+.tq-4 .tq-stars{color:var(--gold)}
+
+.tq-stars{
+  display:flex;gap:2px;margin-bottom:1.2rem;
+}
+.tq-star{
+  width:10px;height:10px;
+  background:var(--gold);
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+.tq-text{
+  font-family:var(--serif);font-style:italic;
+  font-size:1rem;line-height:1.8;
+  color:var(--ink);margin-bottom:1.5rem;
+}
+.tq-author{display:flex;align-items:center;gap:0.8rem;margin-top:auto}
+.tq-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--p200),var(--p400));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:700;color:var(--p700);font-size:0.85rem;
+  flex-shrink:0;
+}
+.tq-name{font-size:0.82rem;font-weight:500;color:var(--ink)}
+.tq-city{font-size:0.72rem;color:var(--muted)}
+
+/* ── URGENCY — FULL BLEED ── */
+#urgency{
+  background:var(--p600);
+  padding:6rem 4rem;
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+}
+#urgency::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--p700) 0%,var(--p500) 100%);
+}
+#urgency::after{
+  content:'LIMITED';
+  position:absolute;right:-2rem;top:50%;transform:translateY(-50%) rotate(90deg);
+  font-family:var(--serif);font-size:8rem;font-weight:900;
+  color:rgba(255,255,255,0.04);white-space:nowrap;pointer-events:none;
+}
+.urgency-left{position:relative}
+.urgency-eyebrow{
+  font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:1rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.urgency-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold)}
+.urgency-title{
+  font-family:var(--serif);
+  font-size:clamp(2.5rem,4vw,4rem);
+  font-weight:900;color:#fff;line-height:1;
+  margin-bottom:1.2rem;
+}
+.urgency-title em{font-style:italic;color:var(--p200)}
+.urgency-body{
+  font-size:0.88rem;color:rgba(255,255,255,0.6);
+  line-height:1.85;margin-bottom:2rem;max-width:380px;
+}
+.urgency-progress{
+  background:rgba(255,255,255,0.12);
+  border-radius:0;height:4px;margin-bottom:0.6rem;
+  overflow:hidden;
+}
+.urgency-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--gold),#fff);
+  width:0;transition:width 1.5s 0.5s ease;
+}
+.urgency-stock-note{
+  display:flex;justify-content:space-between;
+  font-size:0.72rem;color:rgba(255,255,255,0.45);letter-spacing:0.06em;
+}
+.urgency-stock-note strong{color:var(--gold)}
+
+.urgency-right{position:relative}
+.countdown-editorial{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:1px;background:rgba(255,255,255,0.1);
+}
+.ce-box{
+  background:rgba(0,0,0,0.2);
+  padding:2.5rem 1.5rem;
+  text-align:center;
+  transition:background 0.3s;
+}
+.ce-box:hover{background:rgba(0,0,0,0.35)}
+.ce-num{
+  font-family:var(--serif);
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:900;color:#fff;
+  display:block;line-height:1;
+}
+.ce-label{
+  font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);margin-top:0.4rem;display:block;
+}
+.urgency-note-box{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  padding:1.2rem 1.5rem;
+  margin-top:1px;
+  font-size:0.8rem;
+  color:rgba(255,255,255,0.6);
+  text-align:center;
+  line-height:1.6;
+}
+.urgency-note-box strong{color:#fff}
+
+/* ── BONUS — TYPOGRAPHIC ── */
+#bonus{
+  padding:7rem 4rem;
+  background:var(--blush);
+  position:relative;overflow:hidden;
+}
+#bonus::after{
+  content:'BONUS';
+  position:absolute;right:-1rem;top:50%;transform:translateY(-50%) rotate(90deg);
+  font-family:var(--serif);font-size:clamp(6rem,12vw,12rem);font-weight:900;
+  color:rgba(176,112,133,0.07);pointer-events:none;white-space:nowrap;
+}
+.bonus-intro{max-width:640px;margin-bottom:4rem}
+.bonus-intro .eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--p500);margin-bottom:0.8rem;
+}
+.bonus-intro h2{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,4vw,3.5rem);
+  font-weight:700;color:var(--ink);line-height:1.15;
+  margin-bottom:0.8rem;
+}
+.bonus-intro h2 em{font-style:italic;color:var(--p500)}
+.bonus-intro p{font-size:0.9rem;color:var(--muted);line-height:1.85}
+
+.bonus-list{display:flex;flex-direction:column;gap:0}
+.bonus-row{
+  display:grid;grid-template-columns:80px 1fr auto;
+  align-items:center;gap:2rem;
+  padding:1.8rem 0;
+  border-bottom:1px solid rgba(176,112,133,0.15);
+  transition:padding-left 0.3s;
+  position:relative;
+}
+.bonus-row:first-child{border-top:1px solid rgba(176,112,133,0.15)}
+.bonus-row:hover{padding-left:1rem}
+.bonus-row::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;width:0;
+  background:var(--p500);
+  transition:width 0.3s;
+}
+.bonus-row:hover::before{width:3px}
+.bonus-idx{
+  font-family:var(--serif);font-size:2.8rem;font-weight:900;
+  color:rgba(176,112,133,0.18);line-height:1;text-align:right;
+  flex-shrink:0;
+}
+.bonus-info h3{
+  font-family:var(--serif);font-size:1.2rem;font-weight:700;
+  color:var(--ink);margin-bottom:0.2rem;
+}
+.bonus-info p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+.bonus-price-col{text-align:right;flex-shrink:0}
+.bonus-was{
+  font-size:0.8rem;color:var(--muted);
+  text-decoration:line-through;display:block;margin-bottom:0.2rem;
+}
+.bonus-free{
+  font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  color:var(--p500);display:block;white-space:nowrap;
+}
+
+.bonus-total-bar{
+  background:var(--ink);
+  padding:1.5rem 2rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  margin-top:0;
+}
+.bonus-total-bar p{font-size:0.78rem;color:rgba(255,255,255,0.5);letter-spacing:0.08em;text-transform:uppercase}
+.bonus-total-bar .total-val{
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+}
+.bt-was{
+  font-family:var(--serif);font-size:1.8rem;
+  color:rgba(255,255,255,0.2);text-decoration:line-through;
+}
+.bt-free{
+  font-family:var(--serif);font-size:1.4rem;
+  color:var(--gold);font-weight:700;
+}
+
+/* ── CTA — CENTERED EDITORIAL ── */
+#cta{
+  padding:8rem 4rem;
+  background:var(--nude);
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+#cta::before{
+  content:'ORDER';
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:var(--serif);font-size:clamp(8rem,18vw,18rem);font-weight:900;
+  color:rgba(176,112,133,0.04);
+  pointer-events:none;white-space:nowrap;
+}
+.cta-eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--p500);margin-bottom:1rem;
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+}
+.cta-eyebrow::before,.cta-eyebrow::after{content:'';width:32px;height:1px;background:var(--p300)}
+.cta-title{
+  font-family:var(--serif);
+  font-size:clamp(2.5rem,5vw,5rem);
+  font-weight:900;color:var(--ink);line-height:1;
+  margin-bottom:0.5rem;position:relative;
+}
+.cta-title em{font-style:italic;color:var(--p500)}
+.cta-subtitle{
+  font-size:0.9rem;color:var(--muted);margin-bottom:3rem;line-height:1.7;
+}
+.price-wrap{
+  display:inline-flex;flex-direction:column;align-items:center;
+  margin-bottom:2.5rem;
+  position:relative;
+}
+.price-wrap::before{
+  content:'';position:absolute;inset:-1.5rem -3rem;
+  border:1px solid rgba(176,112,133,0.15);
+}
+.price-old{
+  font-size:1rem;color:var(--muted);text-decoration:line-through;
+  margin-bottom:0.3rem;letter-spacing:0.04em;
+}
+.price-new{
+  font-family:var(--serif);
+  font-size:clamp(3.5rem,7vw,6rem);
+  font-weight:900;color:var(--ink);
+  line-height:1;letter-spacing:-0.02em;
+}
+.price-new span{color:var(--p500)}
+.price-save{
+  font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--p500);margin-top:0.4rem;
+}
+.cta-chips{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;
+  margin-bottom:2.5rem;
+}
+.chip{
+  border:1px solid rgba(176,112,133,0.2);
+  padding:0.4rem 1rem;
+  font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--mid);border-radius:2px;
+}
+.btn-cta-big{
+  display:inline-block;
+  background:var(--ink);color:#fff;
+  padding:1.1rem 3.5rem;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;
+  transition:all 0.3s;
+  box-shadow:0 8px 32px rgba(28,13,18,0.2);
+  position:relative;overflow:hidden;
+}
+.btn-cta-big::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--p500),var(--p700));
+  opacity:0;transition:opacity 0.3s;
+}
+.btn-cta-big:hover::before{opacity:1}
+.btn-cta-big span{position:relative}
+.btn-cta-big:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(28,13,18,0.28)}
+.cta-trust{
+  margin-top:1.5rem;font-size:0.72rem;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;
+}
+.cta-trust span{display:flex;align-items:center;gap:0.4rem}
+
+/* ── GUARANTEE ── */
+#guarantee{
+  background:var(--ink);
+  padding:6rem 4rem;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+  position:relative;overflow:hidden;
+}
+#guarantee::after{
+  content:'';
+  position:absolute;right:-100px;top:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,48,122,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.guarantee-left{position:relative}
+.guarantee-seal-editorial{
+  width:130px;height:130px;
+  border:2px solid rgba(200,168,124,0.3);
+  border-radius:50%;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  margin-bottom:2rem;
+  position:relative;
+}
+.guarantee-seal-editorial::before{
+  content:'';position:absolute;inset:6px;
+  border-radius:50%;
+  border:1px dashed rgba(200,168,124,0.2);
+}
+.gse-big{
+  font-family:var(--serif);font-size:2.5rem;font-weight:900;
+  color:var(--gold);line-height:1;
+}
+.gse-small{
+  font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(255,255,255,0.4);text-align:center;
+}
+.guarantee-left h2{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:700;color:#fff;line-height:1.15;
+  margin-bottom:0.8rem;
+}
+.guarantee-left h2 em{font-style:italic;color:var(--p300)}
+.guarantee-left p{font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.85}
+
+.guarantee-right{
+  border:1px solid rgba(255,255,255,0.08);
+  padding:2.5rem;
+}
+.guarantee-right p{
+  font-size:0.92rem;color:rgba(255,255,255,0.6);line-height:1.9;
+}
+.guarantee-right p strong{color:#fff}
+.g-signoff{
+  margin-top:1.5rem;padding-top:1.5rem;
+  border-top:1px solid rgba(255,255,255,0.08);
+  font-family:var(--serif);font-style:italic;
+  font-size:1rem;color:rgba(255,255,255,0.3);
+}
+
+/* ── NB ── */
+#nb{
+  background:var(--nude);
+  padding:4rem;
+}
+.nb-inner{
+  max-width:860px;margin:0 auto;
+  display:grid;grid-template-columns:200px 1fr;
+  gap:4rem;align-items:start;
+}
+.nb-left{
+  border-top:2px solid var(--gold);
+  padding-top:1.2rem;
+}
+.nb-left h3{
+  font-family:var(--serif);font-size:1.5rem;font-weight:700;
+  color:var(--ink);margin-bottom:0.3rem;
+}
+.nb-left p{font-size:0.75rem;color:var(--muted);font-style:italic}
+.nb-items{display:flex;flex-direction:column;gap:0}
+.nb-item{
+  padding:0.9rem 0;
+  border-bottom:1px solid rgba(176,112,133,0.1);
+  font-size:0.84rem;color:var(--mid);line-height:1.7;
+  display:flex;gap:0.8rem;align-items:flex-start;
+}
+.nb-item:first-child{border-top:1px solid rgba(176,112,133,0.1)}
+.nb-item::before{
+  content:counter(nb-counter);
+  counter-increment:nb-counter;
+  font-family:var(--serif);font-size:0.7rem;
+  color:var(--gold);flex-shrink:0;
+  width:1.2rem;padding-top:0.15rem;
+}
+.nb-items{counter-reset:nb-counter}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);
+  padding:2rem 4rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.footer-brand{
+  font-family:var(--serif);font-size:1rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.3);text-decoration:none;
+}
+footer p{font-size:0.72rem;color:rgba(255,255,255,0.2)}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-right .nav-link-hide{display:none}
+  #hero{grid-template-columns:1fr;height:auto}
+  .hero-left{padding:7rem 1.8rem 3rem;clip-path:none}
+  .hero-right{min-height:340px}
+  .hero-overlay-text{font-size:3.5rem}
+  .hero-stats{flex-direction:row;top:1.5rem;right:1.5rem;gap:0.8rem}
+  .hero-stat-num{font-size:1.2rem}
+  #opening{grid-template-columns:1fr}
+  .opening-left{clip-path:none;padding:4rem 1.8rem 3rem}
+  .opening-right{padding:3rem 1.8rem}
+  .bstrip{grid-template-columns:1fr}
+  .bstrip:nth-child(even){direction:ltr}
+  .bstrip-img{min-height:240px}
+  .why-row{grid-template-columns:1fr}
+  #urgency{grid-template-columns:1fr;padding:4rem 1.8rem;gap:3rem}
+  .testi-header-editorial{grid-template-columns:1fr}
+  .testi-masonry{grid-template-columns:1fr}
+  .tq-1,.tq-4{grid-column:span 1}
+  #guarantee{grid-template-columns:1fr;padding:4rem 1.8rem;gap:2rem}
+  .nb-inner{grid-template-columns:1fr;gap:1.5rem}
+  #bonus{padding:5rem 1.8rem}
+  #cta{padding:5rem 1.8rem}
+  footer{padding:1.5rem 1.8rem;flex-direction:column;text-align:center}
+  .bonus-row{grid-template-columns:50px 1fr auto;gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">Haz<sup>MoeslimWear</sup></a>
+  <div class="nav-right">
+    <a href="#benefits" class="nav-link-hide">Keunggulan</a>
+    <a href="#testimonials" class="nav-link-hide">Testimoni</a>
+    <a href="#bonus" class="nav-link-hide">Bonus</a>
+    <a href="#cta" class="nav-pill">Pesan Sekarang</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-stats">
+      <div class="hero-stat-item"><span class="hero-stat-num">5K+</span><span class="hero-stat-label">Pelanggan</span></div>
+      <div class="hero-stat-item"><span class="hero-stat-num">4.9</span><span class="hero-stat-label">Rating</span></div>
+    </div>
+    <div class="hero-tag">Koleksi Premium 2026</div>
+    <h1 class="hero-h1">
+      Ibadah<br>
+      Lebih<br>
+      <em>Khusyuk.</em><br>
+      <span class="gold">Tampil</span><br>
+      Lebih Anggun.
+    </h1>
+    <p class="hero-sub">Mukena Hazmoeslimwear — dirancang untuk muslimah yang menghargai kenyamanan, keindahan, dan ketenangan hati setiap kali bersujud.</p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn-white">Pesan Sekarang</a>
+      <a href="#benefits" class="btn-ghost-white">Lihat Detail</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-fill">
+      <div class="img-placeholder-hero">
+        <img src="https://i.pinimg.com/1200x/de/3f/b7/de3fb7f5e0a03b7711d3f027aca1c183.jpg" alt="Foto produk mukena unggulan" class="img-placeholder-hero">
+    </div>
+    </div>
+    <div class="hero-overlay-text">Mukena</div>
+    <div class="hero-badge-float">
+      <div class="hbf-num">100%</div>
+      <div class="hbf-label">Bahan<br>Premium</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-item">Hazmoeslimwear <span>&#9670;</span> Premium Quality <span>&#9670;</span> Anti Gerah <span>&#9670;</span> Anti Kusut <span>&#9670;</span> Garansi 7 Hari <span>&#9670;</span> Free Ongkir <span>&#9670;</span> 5.000+ Pelanggan <span>&#9670;</span> Rating 4.9 <span>&#9670;</span> Bahan Rayon Premium <span>&#9670;</span> Fast Shipping <span>&#9670;</span></div>
+    <div class="ticker-item">Hazmoeslimwear <span>&#9670;</span> Premium Quality <span>&#9670;</span> Anti Gerah <span>&#9670;</span> Anti Kusut <span>&#9670;</span> Garansi 7 Hari <span>&#9670;</span> Free Ongkir <span>&#9670;</span> 5.000+ Pelanggan <span>&#9670;</span> Rating 4.9 <span>&#9670;</span> Bahan Rayon Premium <span>&#9670;</span> Fast Shipping <span>&#9670;</span></div>
+  </div>
+</div>
+
+<!-- OPENING -->
+<section id="opening">
+  <div class="opening-left reveal-left">
+    <div class="opening-eyebrow">Kenali Masalahnya</div>
+    <h2 class="opening-title">Sudah Sering<br>Kecewa dengan<br><em>Mukena Biasa?</em></h2>
+    <p class="opening-body">Banyak muslimah menghabiskan uang berkali-kali hanya untuk mendapat mukena yang tidak memenuhi harapan — gerah, kusut, cepat rusak. Hazmoeslimwear hadir sebagai jawaban.</p>
+  </div>
+  <div class="opening-right">
+    <div class="problem-list">
+      <div class="prob-item reveal">
+        <div class="prob-num">01</div>
+        <div class="prob-content">
+          <h3>Gerah dan Tidak Nyaman</h3>
+          <p>Bahan sintetis murahan membuat tubuh terasa panas, sulit fokus, dan ibadah terasa terbebani.</p>
+        </div>
+      </div>
+      <div class="prob-item reveal">
+        <div class="prob-num">02</div>
+        <div class="prob-content">
+          <h3>Mudah Kusut Saat Dibawa</h3>
+          <p>Begitu dikeluarkan dari tas, mukena sudah lecek dan memalukan saat dipakai di tempat umum.</p>
+        </div>
+      </div>
+      <div class="prob-item reveal">
+        <div class="prob-num">03</div>
+        <div class="prob-content">
+          <h3>Jahitan Cepat Lepas</h3>
+          <p>Dicuci tiga kali sudah mulai sobek di jahitan. Investasi yang sia-sia dan menguras kantong.</p>
+        </div>
+      </div>
+      <div class="prob-item reveal">
+        <div class="prob-num">04</div>
+        <div class="prob-content">
+          <h3>Desain Tidak Berkarakter</h3>
+          <p>Pilihan monoton yang tidak mencerminkan kepribadian, membuat setiap ibadah terasa biasa saja.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="benefit-banner">
+    <div class="eyebrow">Keunggulan Produk</div>
+    <h2>Beda dari yang Lain,<br><em>Terasa dari Pertama Pakai</em></h2>
+  </div>
+  <div class="benefit-strips">
+    <div class="bstrip">
+      <div class="bstrip-img">
+        <div class="bstrip-img-ph">
+          <img src="https://i.pinimg.com/1200x/69/d2/e4/69d2e4231e4f57e03ee19c9385fe4671.jpg">
+        </div>
+      </div>
+      <div class="bstrip-content reveal">
+        <span class="bstrip-num">01</span>
+        <span class="bstrip-tag">Material</span>
+        <h3>Rayon Premium<br><em>Anti-Gerah</em></h3>
+        <p>Serat rayon pilihan yang lembut seperti sutra, menyerap keringat sempurna, dan memberikan sirkulasi udara optimal agar tubuh tetap sejuk meski sholat berjam-jam.</p>
+      </div>
+    </div>
+    <div class="bstrip">
+      <div class="bstrip-img">
+        <div class="bstrip-img-ph">
+          <img src="https://i.pinimg.com/1200x/df/77/5f/df775fd8fd70e700e2da5e9ce3386c61.jpg">
+        </div>
+      </div>
+      <div class="bstrip-content reveal">
+        <span class="bstrip-num">02</span>
+        <span class="bstrip-tag">Teknologi Kain</span>
+        <h3>Anti-Kusut,<br>Siap <em>Dipakai Kapan Saja</em></h3>
+        <p>Teknologi weave khusus membuat kain kembali rapi hanya dalam hitungan detik. Simpan di tas manapun, keluarkan kapanpun, langsung terlihat sempurna.</p>
+      </div>
+    </div>
+    <div class="bstrip">
+      <div class="bstrip-img">
+        <div class="bstrip-img-ph">
+          <img src="https://i.pinimg.com/1200x/c0/d5/62/c0d562ee0a901085e23a583cff1f8b71.jpg">
+        </div>
+      </div>
+      <div class="bstrip-content reveal">
+        <span class="bstrip-num">03</span>
+        <span class="bstrip-tag">Desain</span>
+        <h3>Lebih dari 15<br><em>Motif Eksklusif</em></h3>
+        <p>Dirancang oleh desainer muslim berpengalaman, setiap motif mencerminkan keanggunan yang tulus — bukan sekadar mengikuti tren, tapi menciptakannya.</p>
+      </div>
+    </div>
+    <div class="bstrip">
+      <div class="bstrip-img">
+        <div class="bstrip-img-ph">
+          <img src="https://i.pinimg.com/1200x/d0/e9/d5/d0e9d5a1920db7bdbeb93f1bb881b88a.jpg">
+        </div>
+      </div>
+      <div class="bstrip-content reveal">
+        <span class="bstrip-num">04</span>
+        <span class="bstrip-tag">Konstruksi</span>
+        <h3>Jahitan Presisi<br><em>Tahan Bertahun-Tahun</em></h3>
+        <p>Setiap sambungan dijahit tiga lapis dengan benang industrial grade. Dicuci ratusan kali pun tidak akan longgar, tidak akan melar, tidak akan mengecewakan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="why-header">
+    <div>
+      <div class="eyebrow">Mengapa Kami</div>
+      <h2>Ribuan Muslimah<br><em>Tidak Salah Pilih</em></h2>
+    </div>
+    <p>Setiap keputusan desain dan produksi kami berawal dari satu pertanyaan: apa yang benar-benar dibutuhkan muslimah Indonesia?</p>
+  </div>
+  <div class="why-row">
+    <div class="why-item reveal">
+      <div class="why-icon">&#127807;</div>
+      <div class="why-item-letter">A</div>
+      <h3>Bahan Tersertifikasi</h3>
+      <p>Setiap lot kain telah melalui uji kelayakan dan aman untuk kulit sensitif sekalipun.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">&#9889;</div>
+      <div class="why-item-letter">B</div>
+      <h3>Pengiriman 1-3 Hari</h3>
+      <p>Ready stock penuh. Dikemas rapi dan dikirim ke seluruh Indonesia lewat ekspedisi terpercaya.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">&#128172;</div>
+      <div class="why-item-letter">C</div>
+      <h3>CS Responsif 24/7</h3>
+      <p>Tim kami merespons di bawah 5 menit via WhatsApp. Pertanyaan apapun, kapanpun.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">&#11088;</div>
+      <div class="why-item-letter">D</div>
+      <h3>5.000+ Ulasan Nyata</h3>
+      <p>Rating 4.9/5 dari pembeli aktif. Bukan bot, bukan rekayasa — murni kepuasan pelanggan.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">&#128200;</div>
+      <div class="why-item-letter">E</div>
+      <h3>Harga Adil, No Markup</h3>
+      <p>Langsung dari pengrajin ke tangan Anda. Kualitas premium tanpa harga yang mencekik.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">&#127981;</div>
+      <div class="why-item-letter">F</div>
+      <h3>UMKM Lokal Indonesia</h3>
+      <p>Setiap pembelian mendukung pengrajin lokal dan pertumbuhan industri fashion muslim Indonesia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testi-header-editorial">
+    <div class="label-col reveal-left">
+      <div class="eyebrow">Testimoni Nyata</div>
+      <h2>Kata<br><em>Mereka</em></h2>
+    </div>
+    <div class="desc-col reveal">
+      <p>Lebih dari 5.000 muslimah dari Sabang hingga Merauke telah merasakan perbedaan nyata Hazmoeslimwear. Ini bukan klaim kami — ini kata mereka yang telah membuktikannya sendiri.</p>
+    </div>
+  </div>
+  <div class="testi-masonry">
+    <div class="testi-quote tq-1 reveal">
+      <div class="tq-stars"><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div></div>
+      <p class="tq-text">Subhanallah, ini mukena pertama yang membuat saya benar-benar lupa dengan rasa panas saat sholat tarawih panjang. Bahannya turun dengan indah, tidak kaku, tidak gerah. Dan motifnya bikin saya ingin cepat-cepat sholat lagi.</p>
+      <div class="tq-author"><div class="tq-avatar">SR</div><div><div class="tq-name">Siti Rahmawati</div><div class="tq-city">Jakarta Selatan</div></div></div>
+    </div>
+    <div class="testi-quote reveal">
+      <div class="tq-stars"><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div></div>
+      <p class="tq-text">Sudah order tiga kali dan tidak pernah kecewa. Paket datang rapi, mukena bersih sempurna, bonus juga lengkap. Langsung rekomendasikan ke grup pengajian.</p>
+      <div class="tq-author"><div class="tq-avatar">NA</div><div><div class="tq-name">Nur Aisyah</div><div class="tq-city">Surabaya, Jatim</div></div></div>
+    </div>
+    <div class="testi-quote reveal">
+      <div class="tq-stars"><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div></div>
+      <p class="tq-text">Sering dinas luar kota dan ini mukena wajib di koper saya. Tidak perlu disetrika, langsung rapi keluar dari tas. Benar-benar solusi.</p>
+      <div class="tq-author"><div class="tq-avatar">FH</div><div><div class="tq-name">Fatimah Hidayati</div><div class="tq-city">Bandung, Jabar</div></div></div>
+    </div>
+    <div class="testi-quote tq-4 reveal">
+      <div class="tq-stars"><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div></div>
+      <p class="tq-text">Sudah dua tahun jadi pelanggan setia. Kualitas tidak pernah turun, koleksi selalu fresh, dan CS-nya ramah banget. Hazmoeslimwear benar-benar memahami apa yang muslimah butuhkan — tidak hanya sekadar produk, tapi pengalaman ibadah yang lebih bermakna.</p>
+      <div class="tq-author"><div class="tq-avatar">RA</div><div><div class="tq-name">Rizka Amelia</div><div class="tq-city">Yogyakarta</div></div></div>
+    </div>
+    <div class="testi-quote reveal">
+      <div class="tq-stars"><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div></div>
+      <p class="tq-text">Warna tidak pudar meski dicuci berkali-kali. Investasi ibadah terbaik yang pernah saya lakukan.</p>
+      <div class="tq-author"><div class="tq-avatar">DM</div><div><div class="tq-name">Dewi Maharani</div><div class="tq-city">Medan, Sumut</div></div></div>
+    </div>
+    <div class="testi-quote reveal">
+      <div class="tq-stars"><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div><div class="tq-star"></div></div>
+      <p class="tq-text">Awalnya ragu beli online. Sekarang tidak mau beli mukena di tempat lain. Garansinya bikin tenang, kualitasnya berbicara sendiri.</p>
+      <div class="tq-author"><div class="tq-avatar">LP</div><div><div class="tq-name">Lestari Pratiwi</div><div class="tq-city">Makassar, Sulsel</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section id="urgency">
+  <div class="urgency-left reveal-left">
+    <div class="urgency-eyebrow">Penawaran Terbatas</div>
+    <h2 class="urgency-title">Jangan Tunda.<br>Stok Hampir<br><em>Habis.</em></h2>
+    <p class="urgency-body">Dari 200 pcs yang disiapkan, hanya tersisa sedikit untuk harga spesial ini. Setelah timer berakhir, harga kembali ke normal dan bonus tidak berlaku.</p>
+    <div class="urgency-progress"><div class="urgency-fill" id="stockFill"></div></div>
+    <div class="urgency-stock-note">
+      <span>Stok tersisa</span>
+      <span><strong id="stockCount">47 pcs</strong> dari 200 pcs</span>
+    </div>
+  </div>
+  <div class="urgency-right reveal">
+    <div class="countdown-editorial">
+      <div class="ce-box"><span class="ce-num" id="hours">08</span><span class="ce-label">Jam</span></div>
+      <div class="ce-box"><span class="ce-num" id="minutes">45</span><span class="ce-label">Menit</span></div>
+      <div class="ce-box"><span class="ce-num" id="seconds">00</span><span class="ce-label">Detik</span></div>
+    </div>
+    <div class="urgency-note-box">
+      Sudah <strong>153 muslimah</strong> memesan hari ini. Kamu yang berikutnya?
+    </div>
+    <div style="margin-top:1.5rem">
+      <a href="#cta" class="btn-white">Klaim Harga Spesial</a>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section id="bonus">
+  <div class="bonus-intro reveal">
+    <div class="eyebrow">Bonus Eksklusif</div>
+    <h2>Empat Hadiah<br><em>Gratis</em> Menanti Anda</h2>
+    <p>Setiap pembelian hari ini dilengkapi bonus eksklusif yang tidak tersedia di waktu lain. Total nilai bonus melebihi harga mukena itu sendiri.</p>
+  </div>
+  <div class="bonus-list">
+    <div class="bonus-row reveal">
+      <div class="bonus-idx">01</div>
+      <div class="bonus-info">
+        <h3>Tas Serut Premium Hazmoeslimwear</h3>
+        <p>Tas kanvas eksklusif bermotif brand, anti-debu, sempurna untuk menyimpan mukena saat bepergian.</p>
+      </div>
+      <div class="bonus-price-col">
+        <span class="bonus-was">Rp 75.000</span>
+        <span class="bonus-free">GRATIS</span>
+      </div>
+    </div>
+    <div class="bonus-row reveal">
+      <div class="bonus-idx">02</div>
+      <div class="bonus-info">
+        <h3>Sachet Pewangi Alami Lavender</h3>
+        <p>Bahan alami yang membuat mukena selalu wangi segar setiap kali dibuka dari penyimpanan.</p>
+      </div>
+      <div class="bonus-price-col">
+        <span class="bonus-was">Rp 50.000</span>
+        <span class="bonus-free">GRATIS</span>
+      </div>
+    </div>
+    <div class="bonus-row reveal">
+      <div class="bonus-idx">03</div>
+      <div class="bonus-info">
+        <h3>Panduan Perawatan Premium</h3>
+        <p>Panduan lengkap agar mukena Anda tetap awet, cerah, dan rapi selama bertahun-tahun.</p>
+      </div>
+      <div class="bonus-price-col">
+        <span class="bonus-was">Rp 45.000</span>
+        <span class="bonus-free">GRATIS</span>
+      </div>
+    </div>
+    <div class="bonus-row reveal">
+      <div class="bonus-idx">04</div>
+      <div class="bonus-info">
+        <h3>Gift Box Eksklusif Siap Hadiahkan</h3>
+        <p>Kemasan premium dengan pita dan kartu ucapan — sempurna dijadikan hadiah istimewa.</p>
+      </div>
+      <div class="bonus-price-col">
+        <span class="bonus-was">Rp 80.000</span>
+        <span class="bonus-free">GRATIS</span>
+      </div>
+    </div>
+  </div>
+  <div class="bonus-total-bar reveal">
+    <p>Total nilai bonus</p>
+    <div class="total-val">
+      <span class="bt-was">Rp 250.000</span>
+      <span class="bt-free">Semua Gratis Hari Ini</span>
+    </div>
+    <a href="#cta" class="btn-white" style="color:var(--ink)">Klaim Bonus</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-eyebrow">Penawaran Eksklusif</div>
+  <h2 class="cta-title reveal">Dapatkan Mukena<br><em>Impian Anda</em></h2>
+  <p class="cta-subtitle reveal">Harga spesial + 4 bonus eksklusif senilai Rp 250.000 — hari ini saja.</p>
+  <div class="price-wrap reveal">
+    <div class="price-old">Harga Normal Rp 350.000</div>
+    <div class="price-new">Rp<span>199</span>.000</div>
+    <div class="price-save">Hemat Rp 151.000 + Bonus Rp 250.000</div>
+  </div>
+  <div class="cta-chips reveal">
+    <span class="chip">Mukena Premium Rayon</span>
+    <span class="chip">Tas Serut</span>
+    <span class="chip">Sachet Pewangi</span>
+    <span class="chip">Panduan Perawatan</span>
+    <span class="chip">Gift Box</span>
+    <span class="chip">Garansi 7 Hari</span>
+    <span class="chip">Gratis Ongkir</span>
+  </div>
+  <a href="https://wa.me/6288971543865?text=Halo+Hazmoeslimwear%2C+saya+ingin+memesan+mukena+premium" class="btn-cta-big reveal" target="_blank"><span>Pesan Sekarang via WhatsApp</span></a>
+  <div class="cta-trust reveal">
+    <span>Pembayaran aman</span>
+    <span>COD tersedia</span>
+    <span>Kirim ke seluruh Indonesia</span>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section id="guarantee">
+  <div class="guarantee-left reveal-left">
+    <div class="guarantee-seal-editorial">
+      <span class="gse-big">7</span>
+      <span class="gse-small">Hari<br>Garansi</span>
+    </div>
+    <h2>Garansi<br><em>Uang Kembali</em><br>Penuh</h2>
+    <p>Tanpa pertanyaan berlebihan. Tanpa syarat rumit. Jika tidak puas, uang kembali sepenuhnya.</p>
+  </div>
+  <div class="guarantee-right reveal">
+    <p>
+      Kami sangat yakin dengan setiap produk yang kami kirimkan. Itulah mengapa kami berani memberikan garansi yang jelas dan tegas: jika dalam <strong>7 hari setelah produk tiba di tangan Anda</strong>, kualitas mukena tidak sesuai dengan yang kami janjikan — bahan terasa berbeda, jahitan tidak rapi, atau alasan apapun yang berkaitan dengan kualitas produksi — kami akan <strong>mengembalikan uang Anda 100%</strong>, tanpa pertanyaan, tanpa proses berbelit, dan tanpa biaya apapun dari pihak Anda.
+    </p>
+    <p style="margin-top:1rem">
+      Kami tidak ingin Anda merasa berjudi saat berbelanja. Kami ingin Anda berbelanja dengan tenang, karena <strong>risikonya sepenuhnya ada di tangan kami</strong>.
+    </p>
+    <div class="g-signoff">— Tim Hazmoeslimwear</div>
+  </div>
+</section>
+
+<!-- NB -->
+<section id="nb">
+  <div class="nb-inner">
+    <div class="nb-left">
+      <h3>Catatan Penting</h3>
+      <p>Harap dibaca sebelum memesan</p>
+    </div>
+    <div class="nb-items">
+      <div class="nb-item">Harga spesial Rp 199.000 hanya berlaku selama stok dan periode promo masih tersedia, dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.</div>
+      <div class="nb-item">Stok sangat terbatas. Pemesanan dilayani berdasarkan urutan masuknya konfirmasi pembayaran.</div>
+      <div class="nb-item">Pengiriman dilakukan setiap Senin hingga Sabtu pada hari kerja, kecuali hari libur nasional.</div>
+      <div class="nb-item">Garansi 7 hari berlaku untuk kerusakan akibat produksi, bukan pemakaian tidak sesuai petunjuk atau kelalaian konsumen.</div>
+      <div class="nb-item">Klaim garansi wajib disertai foto produk dan bukti pembelian, dikirim via WhatsApp CS kami.</div>
+      <div class="nb-item">Bonus yang tersedia bergantung ketersediaan stok. Jika habis, akan diganti bonus lain bernilai setara tanpa pemberitahuan khusus.</div>
+      <div class="nb-item">Hazmoeslimwear tidak bertanggung jawab atas keterlambatan pengiriman akibat kondisi di luar kendali kami, termasuk gangguan cuaca dan ekspedisi.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-brand">Hazmoeslimwear</a>
+  <p>&copy; 2026 Hazmoeslimwear. Seluruh hak cipta dilindungi.</p>
+</footer>
+
+<script>
+// Navbar
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const solid = window.scrollY > 60;
+  navbar.classList.toggle('solid', solid);
+  navbar.classList.toggle('dark-nav', !solid);
+});
+navbar.classList.add('dark-nav');
+
+// Reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left');
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => ro.observe(el));
+
+// Countdown
+function startCountdown() {
+  let endTime = localStorage.getItem('hazmo_v2_countdown');
+  const now = Date.now();
+  if (!endTime || parseInt(endTime) < now) {
+    endTime = now + (8 * 3600 + 45 * 60) * 1000;
+    try { localStorage.setItem('hazmo_v2_countdown', endTime); } catch(e){}
+  }
+  function update() {
+    const rem = Math.max(0, parseInt(endTime) - Date.now());
+    const h = Math.floor(rem / 3600000);
+    const m = Math.floor((rem % 3600000) / 60000);
+    const s = Math.floor((rem % 60000) / 1000);
+    document.getElementById('hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+    document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+  }
+  update();
+  setInterval(update, 1000);
+}
+startCountdown();
+
+// Stock bar
+setTimeout(() => {
+  const fill = document.getElementById('stockFill');
+  if (fill) fill.style.width = '76.5%';
+}, 700);
+</script>
+</body>
+</html>
